@@ -1,12 +1,30 @@
 import { useState } from 'react' 
-import './App.css'
-import {heading} from '../src/components/heading/heading';
+import './App.css' 
+import Dashboard from './Dashboard'
+import Buttons from './ui/Buttons'
 
-function App() { 
+function App() {  
+
+
+  const handleClick = () => {
+    console.log("Button clicked!"); // Perform actions on button click
+  };
+ 
 
   return (
-    <>
-      <heading />
+    <> 
+    <Buttons mainButton={{
+    title: "Main Button red", 
+    color: "red",  
+    onClick:handleClick}} />
+    <Buttons mainButton={{
+    title: "Main Button green", 
+    color: "green",  
+    onClick:handleClick}} />
+    <Buttons mainButton={{
+    title: "Main Button blue",  
+    onClick:handleClick}} />
+    
     </>
   )
 }
